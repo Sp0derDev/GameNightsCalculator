@@ -80,6 +80,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "keyboard_actions",
+      "rootUri": "file:///Users/ahmedyousef/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/keyboard_actions-3.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
       "name": "logger",
       "rootUri": "file:///Users/ahmedyousef/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/logger-0.9.1",
       "packageUri": "lib/",
@@ -188,7 +194,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-07-04T13:52:01.059028Z",
+  "generated": "2020-07-12T13:53:12.604141Z",
   "generator": "pub",
   "generatorVersion": "2.8.4"
 }
