@@ -128,6 +128,12 @@
       "languageVersion": "2.4"
     },
     {
+      "name": "rflutter_alert",
+      "rootUri": "file:///Users/ahmedyousef/Developer/flutter/.pub-cache/hosted/pub.dartlang.org/rflutter_alert-1.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/ahmedyousef/Developer/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -194,7 +200,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-07-12T13:53:12.604141Z",
+  "generated": "2020-07-12T14:09:39.620516Z",
   "generator": "pub",
   "generatorVersion": "2.8.4"
 }

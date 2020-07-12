@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gamenight/components/constants.dart';
 import 'package:gamenight/components/hand_player.dart';
 import 'package:gamenight/pages/hand_calc_page.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class HandPlayerCard extends StatefulWidget {
   HandPlayer player;
@@ -45,20 +46,97 @@ class _HandPlayerCardState extends State<HandPlayerCard> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Text(
-                widget.player.name,
-                style: TextStyle(
-                  color: kDarkButton,
-                  fontFamily: 'AvenirNext',
-                  fontSize: 18,
+              InkWell(
+                onLongPress: () {
+                  Alert(
+                      style: AlertStyle(
+                          backgroundColor: kLightGray,
+                          animationType: AnimationType.grow),
+                      context: context,
+                      title: "Change Name",
+                      content: Column(
+                        children: <Widget>[
+                          TextFormField(
+                            decoration: InputDecoration(
+                              icon: Icon(Icons.account_circle),
+                              labelText: 'Name',
+                            ),
+                            initialValue: widget.player.name,
+                            onChanged: (newName) {
+                              setState(() {
+                                widget.player.name = newName != ''
+                                    ? newName
+                                    : widget.player.name;
+                              });
+                            },
+                          ),
+                        ],
+                      ),
+                      buttons: [
+                        DialogButton(
+                          onPressed: () => Navigator.pop(context),
+                          child: Text(
+                            "Change!",
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        )
+                      ]).show();
+                },
+                child: Text(
+                  widget.player.name,
+                  style: TextStyle(
+                    color: kDarkButton,
+                    fontFamily: 'AvenirNext',
+                    fontSize: 18,
+                  ),
                 ),
               ),
-              Text(
-                widget.player.score.toString(),
-                style: TextStyle(
-                  color: kLightRed,
-                  fontFamily: 'AvenirNext',
-                  fontSize: 16,
+              GestureDetector(
+                onLongPress: () {
+                  Alert(
+                      style: AlertStyle(
+                          backgroundColor: kLightGray,
+                          animationType: AnimationType.grow),
+                      context: context,
+                      title: "Admin Score Override",
+                      content: Column(
+                        children: <Widget>[
+                          TextFormField(
+                            decoration: InputDecoration(
+                              icon: Icon(Icons.account_circle),
+                              labelText: 'Score',
+                            ),
+                            initialValue: widget.player.score.toString(),
+                            onChanged: (newScore) {
+                              setState(() {
+                                widget.player.score = newScore != ''
+                                    ? int.parse(newScore)
+                                    : widget.player.score;
+                              });
+                            },
+                            keyboardType: TextInputType.number,
+                          ),
+                        ],
+                      ),
+                      buttons: [
+                        DialogButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: Text(
+                            "Change!",
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                        )
+                      ]).show();
+                },
+                child: Text(
+                  widget.player.score.toString(),
+                  style: TextStyle(
+                    color: kLightRed,
+                    fontFamily: 'AvenirNext',
+                    fontSize: 16,
+                  ),
                 ),
               ),
             ],
