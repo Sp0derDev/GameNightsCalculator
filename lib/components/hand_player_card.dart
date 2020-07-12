@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gamenight/components/constants.dart';
 import 'package:gamenight/components/hand_player.dart';
 import 'package:gamenight/pages/hand_calc_page.dart';
@@ -13,6 +14,7 @@ class HandPlayerCard extends StatefulWidget {
 }
 
 class _HandPlayerCardState extends State<HandPlayerCard> {
+  @override
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -103,7 +105,7 @@ class _HandPlayerCardState extends State<HandPlayerCard> {
                         children: <Widget>[
                           TextFormField(
                             decoration: InputDecoration(
-                              icon: Icon(Icons.account_circle),
+                              icon: Icon(FontAwesomeIcons.calculator),
                               labelText: 'Score',
                             ),
                             initialValue: widget.player.score.toString(),

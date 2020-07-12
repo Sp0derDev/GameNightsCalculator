@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gamenight/components/constants.dart';
 import 'package:gamenight/components/hand_player.dart';
+import 'package:gamenight/components/prefs_handler.dart';
 import 'package:gamenight/components/white_main_box.dart';
 import 'package:gamenight/components/bottom_long_button.dart';
 import 'package:gamenight/components/gradient_bg.dart';
@@ -10,6 +11,7 @@ import 'package:gamenight/components/hand_score_container.dart';
 
 class HandCalcPage extends StatefulWidget {
   HandPlayer player;
+
   HandCalcPage({@required this.player});
 
   @override
@@ -17,9 +19,13 @@ class HandCalcPage extends StatefulWidget {
 }
 
 class _HandCalcPageState extends State<HandCalcPage> {
+  void initState() {
+    print(widget.player.tag);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    int tempScore = widget.player.score;
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -106,6 +112,9 @@ class _HandCalcPageState extends State<HandCalcPage> {
                 onTap: () {
                   setState(() {
                     widget.player.confirmScore();
+                    print(widget.player.tag);
+
+                    savePlayer(widget.player.tag, widget.player);
                     Navigator.pop(context);
                   });
                 },
