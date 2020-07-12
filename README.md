@@ -11,8 +11,8 @@ We are currently working on other games such as
 
 ## Getting Started
 
-1 - Clone the repository and open it in VSCode or Android Studio
-2- Run It And Enjoy!
+1. Clone the repository and open it in VSCode or Android Studio.
+2. Run It And Enjoy!
 
 Alternatively, you can download the IPA/APK file and install it onto your device.
 
