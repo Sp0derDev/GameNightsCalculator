@@ -6,6 +6,7 @@ import 'package:gamenight/components/bottom_long_button.dart';
 import 'package:gamenight/components/gradient_bg.dart';
 import 'package:gamenight/components/title_text.dart';
 import 'package:gamenight/components/hand_player.dart';
+import 'package:keyboard_actions/keyboard_actions.dart';
 
 class HandScoreContainer extends StatefulWidget {
   HandPlayer player;
@@ -129,7 +130,6 @@ class _HandScoreContainerState extends State<HandScoreContainer> {
                       child: TextField(
                         controller: totalCardsField,
                         enabled: isSuckSelected ? false : true,
-                        keyboardType: TextInputType.number,
                         textAlign: TextAlign.center,
                         onSubmitted: (input) {
                           setState(() {
