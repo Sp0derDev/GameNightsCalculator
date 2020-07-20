@@ -18,12 +18,20 @@ Alternatively, you can download the IPA/APK file and install it onto your device
 
 ## Screenshots
 
+
+
 **Home Page**
-[![IMG-2546.png](https://i.postimg.cc/L5R8GKbK/IMG-2546.png)](https://postimg.cc/sQ6zZ8zw)
+
+[![IMG-2546.png](https://i.postimg.cc/L5R8GKbK/IMG-2546.png)]
+
 
 **Players Page**
-[![IMG-2547.png](https://i.postimg.cc/TYdP9xbn/IMG-2547.png)](https://postimg.cc/5jr14Znt)
+
+[![IMG-2547.png](https://i.postimg.cc/TYdP9xbn/IMG-2547.png)]
+
+
 
 **Calculator Page**
-[![IMG-2548.png](https://i.postimg.cc/mrvDNF3r/IMG-2548.png)](https://postimg.cc/06CP9jBg)
+
+[![IMG-2548.png](https://i.postimg.cc/mrvDNF3r/IMG-2548.png)]
 
